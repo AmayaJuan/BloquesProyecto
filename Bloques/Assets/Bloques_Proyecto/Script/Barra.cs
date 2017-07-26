@@ -20,7 +20,7 @@ public class Barra : MonoBehaviour
         transform.position = new Vector3(Mathf.Clamp(posX, -8, 8), transform.position.y, transform.position.z);
 	}
 
-    public void ResetInicial()
+    public void Reset()
     {
         transform.position = posIncial;
     }
