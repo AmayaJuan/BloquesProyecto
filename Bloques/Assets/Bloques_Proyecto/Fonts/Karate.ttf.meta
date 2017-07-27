@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 90e7f8d70e9f0d34b8385a710cd46bd6
+timeCreated: 1501112690
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Karate
+  fontNames:
+  - Karate
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
