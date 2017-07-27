@@ -3,16 +3,15 @@
 public class Pelota : MonoBehaviour
 {
     public float velocidadInicial = 600f;
+    public Transform barra;
 
     bool enJuego;
     Vector3 posIncial;
-    Transform barra;
     Rigidbody rig;
    
     void Awake()
     {
         rig = GetComponent<Rigidbody>();
-        barra = GetComponentInParent<Transform>();
     }
 
     void Start ()
