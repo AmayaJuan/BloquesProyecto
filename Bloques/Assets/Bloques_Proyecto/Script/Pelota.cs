@@ -2,6 +2,7 @@
 
 public class Pelota : MonoBehaviour
 {
+    public ElementoInterativo pantalla;
     public float velocidadInicial = 600f;
     public Transform barra;
 
@@ -21,7 +22,7 @@ public class Pelota : MonoBehaviour
 	
 	void Update ()
     {
-        if (!enJuego && Input.GetButtonDown("Fire1"))
+        if (!enJuego && (Input.GetButtonDown("Fire1") || pantalla.pulsado))
         {
             enJuego = true;
             transform.SetParent(null);
