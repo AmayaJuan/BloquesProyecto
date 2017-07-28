@@ -9,6 +9,7 @@ public class Bloque : MonoBehaviour
     {
         Instantiate(efectoParticulas, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        transform.SetParent(null);
         puntos.GanarPuntos();
     }
 }
