@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class Vidas : MonoBehaviour
 {
+    public SiguienteNivel siguienteNivel;
+    public GameObject gameOver;
     public Pelota pelota;
     public Barra barra;
     public static int vidas = 3;
@@ -20,10 +22,22 @@ public class Vidas : MonoBehaviour
 	
     public void PerderVida()
     {
+        if (vidas <= 0) return;
         Vidas.vidas--;
         ActualizarMarcadorVidas();
 
-        barra.Reset();
-        pelota.Reset();
+        if (vidas <= 0)
+        {
+            gameOver.SetActive(true);
+            pelota.DetenerMovimiento();
+            barra.enabled = false;
+            siguienteNivel.nivelACargar = "Portada";
+            siguienteNivel.ActivarCargar();
+        }
+        else
+        {
+            barra.Reset();
+            pelota.Reset();
+        }
     }
 }
