@@ -5,6 +5,7 @@ public class Puntos : MonoBehaviour
 {
     public static int puntos = 0;
     public SiguienteNivel siguienteNivel;
+    public SonidosFinPartida sonidosFinPartida;
     public Pelota pelota;
     public Barra barra;
     public GameObject nivelCompletado;
@@ -37,6 +38,7 @@ public class Puntos : MonoBehaviour
             else
                 nivelCompletado.SetActive(true);
 
+            sonidosFinPartida.NivelCompletado();
             siguienteNivel.ActivarCargar();
         }
     }

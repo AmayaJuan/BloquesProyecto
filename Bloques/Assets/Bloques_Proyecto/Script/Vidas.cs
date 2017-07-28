@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class Vidas : MonoBehaviour
 {
     public SiguienteNivel siguienteNivel;
+    public SonidosFinPartida sonidosFinPartida;
     public GameObject gameOver;
     public Pelota pelota;
     public Barra barra;
@@ -28,6 +29,7 @@ public class Vidas : MonoBehaviour
 
         if (vidas <= 0)
         {
+            sonidosFinPartida.GameOver();
             gameOver.SetActive(true);
             pelota.DetenerMovimiento();
             barra.enabled = false;
