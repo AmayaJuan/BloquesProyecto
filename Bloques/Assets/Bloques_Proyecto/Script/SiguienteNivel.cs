@@ -14,6 +14,10 @@ public class SiguienteNivel : MonoBehaviour
 
     void CargarNivel()
     {
+        if (!EsUltimoNivel())
+        {
+            Vidas.vidas++;
+        }
         SceneManager.LoadScene(nivelACargar);
     }
 
